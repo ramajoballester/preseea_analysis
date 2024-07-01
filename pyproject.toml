@@ -3,12 +3,12 @@ requires = ['setuptools', 'setuptools-scm']
 build-backend = 'setuptools.build_meta'
 
 [project]
-name = 'my_package'
-version = '0.1.2'
+name = 'preseea_analysis'
+version = '0.1.0'
 authors = [
     {name='Álvaro Ramajo-Ballester', email='aramajo@ing.uc3m.es'},
 ]
-description = 'my_package description'
+description = 'preseea_analysis description'
 readme = 'README.md'
 # requires-python = '>=3.8,<3.10'
 requires-python = '>=3.9'
@@ -37,10 +37,12 @@ keywords = [
 ]
 
 dependencies = [
-    'openai-whisper',
-    'montreal-forced-aligner',
-    # 'PyQt5',
-    # 'pyqt'
+    'numpy',
+    'pandas',
+    'matplotlib',
+    'openpyxl',
+    'scikit-learn',
+    'tqdm',
 ]
 
 [project.optional-dependencies]
@@ -50,6 +52,7 @@ dev = [
     'twine',
     'build',
     'bump-my-version',
+    'ruff'
 ]
 
 docs = [
@@ -61,13 +64,13 @@ docs = [
     'numpydoc==1.5.0',
     'myst-parser==2.0.0',
 ]
-full = ['my_package[dev,docs]']
+full = ['preseea_analysis[dev,docs]']
 
 [tool.setuptools.packages]
 find = {namespaces = false, exclude = ['docs']}
 
 [project.scripts]
-my_package = "my_package.scripts.aligner:main"
+preseea_analysis = "preseea_analysis.scripts.aligner:main"
 
 [tool.bumpversion]
 current_version = "0.1.2"
@@ -95,5 +98,5 @@ filename = "docs/source/conf.py"
 
 
 [project.urls]
-'Homepage' = 'https://github.com/ramajoballester/my_package'
-'Bug Tracker' = 'https://github.com/ramajoballester/my_package/issues'
+'Homepage' = 'https://github.com/ramajoballester/preseea_analysis'
+'Bug Tracker' = 'https://github.com/ramajoballester/preseea_analysis/issues'
