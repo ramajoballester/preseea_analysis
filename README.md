@@ -9,7 +9,7 @@ You can install the repository by running the following command:
 ```bash
 git clone https://github.com/ramajoballester/preseea_analysis.git
 cd preseea_analysis
-pip install -e .[dev]
+pip install -e .
 ```
 
 ## Notebooks
