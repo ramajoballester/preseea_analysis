@@ -29,11 +29,8 @@ classifiers = [
 
 keywords = [
     'python',
-    'pytorch',
-    'deep-learning',
-    'audio',
-    'audio-transcription',
-    'audio-text-alignment'
+    'pandas',
+    'data-analysis',
 ]
 
 dependencies = [
@@ -43,6 +40,7 @@ dependencies = [
     'openpyxl',
     'scikit-learn',
     'tqdm',
+    'seaborn',
 ]
 
 [project.optional-dependencies]
@@ -52,7 +50,8 @@ dev = [
     'twine',
     'build',
     'bump-my-version',
-    'ruff'
+    'ruff',
+    'lxml',
 ]
 
 docs = [
@@ -95,6 +94,22 @@ filename = "pyproject.toml"
 
 [[tool.bumpversion.files]]
 filename = "docs/source/conf.py"
+
+
+[tool.ruff]
+line-length = 79
+# extend-select = ['Q']
+extend-select = ['W505']
+ignore = ['F401']
+
+[tool.ruff.format]
+# Prefer single quotes over double quotes.
+quote-style = 'single'
+
+[tool.ruff.lint.pycodestyle]
+max-doc-length = 79
+max-line-length = 79
+
 
 
 [project.urls]
